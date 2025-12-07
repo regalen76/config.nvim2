@@ -1,7 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	branch = "master",
-	lazy = false,
+	event = { "BufReadPost", "BufWritePost", "BufNewFile", "VeryLazy" },
 	opts = {
 		ensure_installed = {
 			"lua",
