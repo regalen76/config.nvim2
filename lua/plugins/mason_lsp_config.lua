@@ -4,6 +4,8 @@ return {
 		automatic_enable = {
 			exclude = {
 				"rust_analyzer",
+				"bacon",
+				"bacon-ls",
 			},
 		},
 	},
