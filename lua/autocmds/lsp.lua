@@ -132,8 +132,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 
 		-- Diagnostics
-		nmap("[d", vim.diagnostic.goto_prev, "Go to previous diagnostic")
-		nmap("]d", vim.diagnostic.goto_next, "Go to next diagnostic")
+		nmap("[d", vim.diagnostic.jump({next = false}), "Go to previous diagnostic")
+		nmap("]d", vim.diagnostic.jump({next = true}), "Go to next diagnostic")
 		nmap("<leader>ce", vim.diagnostic.open_float, "Open diagnostic float")
 		nmap("<leader>cq", vim.diagnostic.setloclist, "Diagnostics to loclist")
 	end,
