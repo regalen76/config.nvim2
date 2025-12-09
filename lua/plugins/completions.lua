@@ -4,8 +4,8 @@ return {
 	-- optional: provides snippets for the snippet source
 	dependencies = {
 		"rafamadriz/friendly-snippets",
-		-- you also need lazydev itself
 		"folke/lazydev.nvim",
+		"fang2hou/blink-copilot",
 	},
 
 	-- use a release tag to download pre-built binaries
@@ -35,7 +35,7 @@ return {
 
 		sources = {
 			-- lazydev added as first provider
-			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+			default = { "lazydev", "lsp", "path", "snippets", "buffer", "copilot" },
 
 			providers = {
 				lazydev = {
@@ -43,6 +43,11 @@ return {
 					module = "lazydev.integrations.blink",
 					-- make lazydev completions top priority
 					score_offset = 100,
+				},
+				copilot = {
+					name = "copilot",
+					module = "blink-copilot",
+					async = true,
 				},
 			},
 		},
