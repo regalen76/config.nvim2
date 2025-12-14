@@ -510,20 +510,6 @@ return {
 			desc = "C[a]lls Outgoing",
 		},
 		{
-			"<leader>ss",
-			function()
-				Snacks.picker.lsp_symbols()
-			end,
-			desc = "LSP Symbols",
-		},
-		{
-			"<leader>sS",
-			function()
-				Snacks.picker.lsp_workspace_symbols()
-			end,
-			desc = "LSP Workspace Symbols",
-		},
-		{
 			"<A-i>",
 			function()
 				Snacks.terminal.toggle(vim.o.shell, {

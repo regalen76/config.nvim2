@@ -88,15 +88,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			nmap("gao", function()
 				Snacks.picker.lsp_outgoing_calls()
 			end, "C[a]lls Outgoing")
-
-			-- Symbols
-			nmap("<leader>ss", function()
-				Snacks.picker.lsp_symbols()
-			end, "LSP Symbols")
-
-			nmap("<leader>sS", function()
-				Snacks.picker.lsp_workspace_symbols()
-			end, "LSP Workspace Symbols")
 		else
 			-- Fallback to plain LSP if Snacks isn't available
 			nmap("gd", vim.lsp.buf.definition, "Goto Definition")
