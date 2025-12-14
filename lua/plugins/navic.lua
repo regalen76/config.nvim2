@@ -11,6 +11,7 @@ return {
 		depth_limit_indicator = "…",
 		lsp = {
 			auto_attach = true,
+      preference = { "vue_ls" },
 		},
 	},
 	config = function(_, opts)

@@ -6,6 +6,8 @@ return {
 				"rust_analyzer",
 				"bacon",
 				"bacon-ls",
+        "vtsls",
+        "vue_ls"
 			},
 		},
 	},
